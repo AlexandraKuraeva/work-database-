@@ -5,7 +5,7 @@
 	 
   </head>
   <body>
-    <h1>Форма добавления в очередь!!!!!!!!!!</h1>
+    <h1>Форма добавления в очередь</h1>
 
     <form 
 	 action="require.php"
@@ -20,8 +20,8 @@
     </form>
 	 
     <form action="export-pdf.php" method="post">
-		    <input id="generatePdfBtn" type="submit" name="exportPDF" value="Export"> 
-	 </form>
+	<input id="generatePdfBtn" type="submit" name="exportPDF" value="Export"> 
+    </form>
 
   </body>
 </html>
