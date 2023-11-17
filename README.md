@@ -13,25 +13,25 @@
 
 1. Клонируйте репозиторий на ваше локальное устройство:
 
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/AlexandraKuraeva/work-database-.git
 
 2. Откройте Open Server и убедитесь, что веб-сервер и база данных запущены.
 
 3. Создайте базу данных MySQL и настройте соответствующие параметры подключения в файле config.php. Убедитесь, что файл config.php содержит правильные настройки для подключения к вашей базе данных:
 
-define('DB_HOST', 'your-host');
-define('DB_USER', 'your-username');
-define('DB_PASS', 'your-password');
-define('DB_NAME', 'your-database');
+$servername = 'your-host';
+$username = 'your-username';
+$password = 'your-password';
+$dbname = 'your-database';
 
 
-4. В вашей базе данных создайте таблицу с необходимыми полями для хранения данных электронной очереди. Например:
+4. В вашей базе данных создайте таблицу с именем `queue` и с необходимыми полями для хранения данных электронной очереди:
 
 CREATE TABLE queue (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   surname VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
