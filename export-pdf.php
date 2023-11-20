@@ -1,25 +1,17 @@
 <?php
-
 include_once("db.php");
-
 include_once('fpdf186/fpdf.php'); // Подключить библиотеку FPDF
-
-//if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'download-pdf'){
-
 
     // Запрос для получения данных из таблицы
 	 $query = "SELECT * FROM `queue`";
-	 
     $result = $conn->query($query);
 	
-
     // Создание нового PDF-документа
     $pdf = new FPDF();
     $pdf->AddPage();
 
     // Установка шрифта и размера
     $pdf->SetFont('Arial', 'B', 14);
-
 	 $pdf->Cell(40, 10, 'ID', 1);
 	 $pdf->Cell(40, 10, 'Name', 1);
 	 $pdf->Cell(60, 10, 'Surname', 1);
@@ -41,6 +33,6 @@ include_once('fpdf186/fpdf.php'); // Подключить библиотеку F
     // Вывод PDF-файла
     $pdf->Output();
     exit;
-//}
+
 
 
